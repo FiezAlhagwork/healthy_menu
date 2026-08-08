@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 "use client";
 
 import { useState, useEffect } from "react";
@@ -73,7 +74,9 @@ export function ProductForm({
   }, []);
 
   const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
+    e: React.ChangeEvent<
+      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
+    >,
   ) => {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
@@ -182,6 +185,7 @@ export function ProductForm({
           className="text-sm text-text-muted"
         />
         {imagePreview && (
+          // eslint-disable-next-line @next/next/no-img-element
           <img
             src={imagePreview}
             alt="preview"

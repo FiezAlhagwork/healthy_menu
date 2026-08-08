@@ -40,7 +40,7 @@ export function ProductCard({
       </div>
 
       {/* المحتوى */}
-      <div className="p-3 md:p-5 flex flex-col flex-grow justify-between">
+      <div className="p-3 md:p-5 flex flex-col grow justify-between">
         <div>
           <h3 className="text-sm md:text-base font-bold text-primary-color mb-1 md:mb-1.5 line-clamp-1">
             {title}

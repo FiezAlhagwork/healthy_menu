@@ -38,7 +38,7 @@ export function AdminProductCard({
         )}
       </div>
 
-      <div className="p-5 flex flex-col flex-grow justify-between">
+      <div className="p-5 flex flex-col grow justify-between">
         <div className="cursor-pointer" onClick={onView}>
           <h3 className="text-base font-bold text-primary-color mb-1.5 line-clamp-1">
             {title}

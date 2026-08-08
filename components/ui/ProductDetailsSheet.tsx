@@ -51,7 +51,7 @@ export function ProductDetailsSheet({
       onClick={onClose}
     >
       <div
-        className="bg-white w-full max-w-150 rounded-t-[28px] md:rounded-3xl p-6 max-h-[85vh] overflow-y-auto relative shadow-2xl animate-slide-up [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden"
+        className="bg-white w-full max-w-150 rounded-t-[28px] md:rounded-3xl p-6 max-h-[85vh] overflow-y-auto relative shadow-2xl animate-slide-up scrollbar-none [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden"
         onClick={(e) => e.stopPropagation()}
       >
         {/* مقبض السحب (للموبايل) */}
