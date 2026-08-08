@@ -1,29 +1,6 @@
-import {
-  Salad,
-  CupSoda,
-  IceCreamCone,
-  UtensilsCrossed,
-  LucideIcon,
-} from "lucide-react";
-
-interface Category {
-  id: string;
-  name: string;
-  slug: string;
-}
-
-interface CategoryTabsProps {
-  categories: Category[];
-  activeCategory: string;
-  onChange: (categoryId: string) => void;
-  showAllTab?: boolean;
-}
-
-const categoryDisplay: Record<string, { icon: LucideIcon; label: string }> = {
-  food: { icon: Salad, label: "ماكولات" },
-  drinks: { icon: CupSoda, label: "مشروبات" },
-  dessert: { icon: IceCreamCone, label: "حلويات" },
-};
+import { categoryDisplay } from "@/constant";
+import { CategoryTabsProps } from "@/types/database";
+import { UtensilsCrossed, LucideIcon } from "lucide-react";
 
 export function CategoryTabs({
   categories,

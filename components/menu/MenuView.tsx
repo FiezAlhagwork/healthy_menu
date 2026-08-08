@@ -5,6 +5,8 @@ import { ProductCard } from "@/components/ui/ProductCard";
 import { ProductDetailsSheet } from "@/components/ui/ProductDetailsSheet";
 import { Input } from "../ui/Input";
 import { CategoryTabs } from "./CategoryTabs";
+import { MenuHero } from "./MenuHero";
+import { MenuNavbar } from "./MenuNavbar";
 
 interface Category {
   id: string;
@@ -55,6 +57,8 @@ export function MenuView({
 
   return (
     <div className="max-w-6xl mx-auto px-4 py-6">
+      <MenuNavbar restaurantName="super Healthy" logoUrl="/logo.png" />
+
       <Input
         type="text"
         placeholder="ابحث عن صنف..."
