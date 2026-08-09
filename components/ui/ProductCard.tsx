@@ -30,6 +30,7 @@ export function ProductCard({
           src={image}
           alt={title}
           fill
+          loading="eager"
           className="object-cover transition-transform duration-500 group-hover:scale-105"
         />
         {badgeText && (

@@ -30,7 +30,7 @@ export function AdminProductCard({
         className="w-full h-48 relative overflow-hidden bg-slate-100 shrink-0 cursor-pointer"
         onClick={onView}
       >
-        <Image src={image} alt={title} fill className="object-cover" />
+        <Image src={image} alt={title} fill loading="eager" className="object-cover" />
         {!isAvailable && (
           <div className="absolute inset-0 bg-black/50 flex items-center justify-center">
             <span className="text-white font-bold text-sm">غير متوفر</span>

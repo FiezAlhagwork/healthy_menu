@@ -12,7 +12,7 @@ export function MenuNavbar({ logoUrl, restaurantName }: MenuNavbarProps) {
     <div className="flex items-center justify-between py-4 mb-4">
       <div className="flex items-center gap-2.5">
         {logoUrl && (
-          <div className="relative w-10 h-10 rounded-full overflow-hidden shrink-0">
+          <div className="relative w-13 h-13 rounded-full overflow-hidden shrink-0">
             <Image
               src={logoUrl}
               alt={restaurantName}

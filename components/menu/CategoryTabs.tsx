@@ -7,6 +7,7 @@ export function CategoryTabs({
   activeCategory,
   onChange,
   showAllTab = true,
+  counts,
 }: CategoryTabsProps) {
   return (
     <div className="flex gap-2 overflow-x-auto pb-2 mb-6 no-scrollbar">
@@ -16,6 +17,7 @@ export function CategoryTabs({
           onClick={() => onChange("all")}
           label="الكل"
           Icon={UtensilsCrossed}
+          count={counts?.all}
         />
       )}
 
@@ -28,6 +30,7 @@ export function CategoryTabs({
             onClick={() => onChange(cat.id)}
             label={display?.label || cat.name}
             Icon={display?.icon}
+            count={counts?.[cat.id]}
           />
         );
       })}
@@ -40,11 +43,13 @@ function TabButton({
   onClick,
   label,
   Icon,
+  count,
 }: {
   isActive: boolean;
   onClick: () => void;
   label: string;
   Icon?: LucideIcon;
+  count?: number;
 }) {
   return (
     <button
@@ -57,6 +62,15 @@ function TabButton({
     >
       {Icon && <Icon size={16} />}
       {label}
+      {count !== undefined && (
+        <span
+          className={`text-xs font-bold ${
+            isActive ? "text-white/80" : "text-text-muted/70"
+          }`}
+        >
+          ({count})
+        </span>
+      )}
     </button>
   );
 }

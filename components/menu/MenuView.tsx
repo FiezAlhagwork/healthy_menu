@@ -5,7 +5,6 @@ import { ProductCard } from "@/components/ui/ProductCard";
 import { ProductDetailsSheet } from "@/components/ui/ProductDetailsSheet";
 import { Input } from "../ui/Input";
 import { CategoryTabs } from "./CategoryTabs";
-import { MenuHero } from "./MenuHero";
 import { MenuNavbar } from "./MenuNavbar";
 
 interface Category {
@@ -55,9 +54,17 @@ export function MenuView({
     return result;
   }, [products, activeCategory, searchQuery]);
 
+  const categoryCounts = useMemo(() => {
+    const counts: Record<string, number> = { all: products.length };
+    categories.forEach((cat) => {
+      counts[cat.id] = products.filter((p) => p.category_id === cat.id).length;
+    });
+    return counts;
+  }, [products, categories]);
+
   return (
     <div className="max-w-6xl mx-auto px-4 py-6">
-      <MenuNavbar restaurantName="super Healthy" logoUrl="/logo.png" />
+      <MenuNavbar restaurantName="Super Healthy" logoUrl="/logo.jpg" />
 
       <Input
         type="text"
@@ -71,6 +78,7 @@ export function MenuView({
         categories={categories}
         activeCategory={activeCategory}
         onChange={setActiveCategory}
+        counts={categoryCounts}
       />
 
       {/* الكروت */}

@@ -72,9 +72,11 @@ export function ProductDetailsSheet({
             src={product.image}
             alt={product.name}
             fill
+            loading="eager"
             className="object-cover"
           />
         </div>
+
 
         {/* العنوان والسعر */}
         <div className="flex justify-between items-start mb-3">

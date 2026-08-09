@@ -8,6 +8,9 @@ const nextConfig: NextConfig = {
         hostname: "respsceekybuavxxiayb.supabase.co",
       },
     ],
+
+    imageSizes: [400],
+    deviceSizes: [640],
   },
   reactCompiler: true,
 };

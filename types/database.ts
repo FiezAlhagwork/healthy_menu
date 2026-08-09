@@ -1,7 +1,5 @@
 import { InputHTMLAttributes } from "react";
- import { ButtonHTMLAttributes } from 'react'
-
-
+import { ButtonHTMLAttributes } from "react";
 
 export interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
   label?: string;
@@ -9,10 +7,9 @@ export interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
 }
 
 export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
-  variant?: 'primary' | 'secondary' | 'outline'
-  loading?: boolean
+  variant?: "primary" | "secondary" | "outline";
+  loading?: boolean;
 }
-
 
 export interface Category {
   id: string;
@@ -25,5 +22,5 @@ export interface CategoryTabsProps {
   activeCategory: string;
   onChange: (categoryId: string) => void;
   showAllTab?: boolean;
+  counts?: Record<string, number>; // { categoryId: count, all: totalCount }
 }
-
